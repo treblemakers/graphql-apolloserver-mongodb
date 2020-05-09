@@ -2,7 +2,9 @@ type Query {
   user: User
   users: [User]!
   product(id: ID!): Product
+  productSearch(description: String,price:Float): [Product]
   products: [Product]!
+  postsOffset(limit: Int!, offset: Int!): [Product!]!
 }
 
 type Mutation {
